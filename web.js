@@ -1,4 +1,5 @@
-var buf = new Buffer((fs.readFileSync('index.html')).toString());
+var buf = new Buffer(256);
+buf = fs.readFileSync('index.html');
 var express = require('express');
 var app = express();
 app.use(express.logger());
